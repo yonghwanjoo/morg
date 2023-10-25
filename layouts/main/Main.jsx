@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
 import Image from "next/image";
-import { Container, Center, ImageDiv, Text2, Button } from '../../styles/style';
+import { Title2, Container, Center, ImageDiv, Text2, Button } from '../../styles/style';
 
 const Main = () => {
   React.useEffect(() => {
@@ -25,10 +25,10 @@ const Main = () => {
     <Section>
       <Container>
         <Center>
-          <h2 data-aos="fade-in" data-aos-delay="50" style={{fontSize: "48px", fontWeight: "bold"}}>
+          <Title2 data-aos="fade-in" data-aos-delay="50">
             잘되는 골프연습장 운영<br />
             노하우, 궁금하신가요?
-          </h2>
+          </Title2>
           <Text2 data-aos="fade-in" data-aos-delay="100">
             정답은 100% 고객에게서 찾으셔야 합니다.
             <br />
@@ -64,6 +64,6 @@ const Section = styled.main`
   background-color: #fff;
   @media (max-width: 1279px) {
     width: 100%;
-    padding: 125px 1.5rem 75px;
+    padding: 125px 0 75px;
   }
 `;

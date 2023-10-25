@@ -59,13 +59,13 @@ const Review = () => {
             따끈한 후기를 확인해보세요
           </Title>
           <Box data-aos="fade-up" data-aos-delay="200">
-            <Grid style={{marginTop: "100px"}}>
+            <Grid>
               {review.map((item) => (
                 <GridItem key={item}>
                   <TextWrap>
-                    <Typography variant="body1" component="p">
+                    <p>
                       {item.text1}
-                    </Typography>
+                    </p>
                   </TextWrap>
                 </GridItem>
               ))}

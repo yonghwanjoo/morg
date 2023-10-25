@@ -31,17 +31,13 @@ export const Center = styled.div`
 
 export const Grid = styled.article`
   width: 100%;
-  margin-top: 150px;
+  padding-top: 80px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  &:first-child {
-    margin-top: 0;
-  }
   @media (max-width: 1023px) {
     display: block;
-    margin: 1.5rem 0;
+    padding-top: 40px;
   }
 `;
 
@@ -55,8 +51,8 @@ export const GridItem = styled.div`
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
   padding: 24px;
   @media (max-width: 1023px) {
-    height: 280px;
-    margin-bottom: 80px;
+    height: auto;
+    margin-bottom: 40px;
   }
 `;
 
@@ -134,18 +130,26 @@ export const CardHeader = styled.div`
       font-weight: 600;
     }
   }
-  /* 수정하라 */
   @media (max-width: 767px) {
-    padding: 2rem;
+    padding: 20px;
     margin-top: 2rem;
     > h4 {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       > span {
         font-size: 0.8rem;
       }
     }
     > p {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
+    }
+    span {
+      &.sm {
+        font-size: .8rem;
+      }
+      &.tooltip {
+        padding: 4px 10px;
+        font-size: 0.7rem;;
+      }
     }
   }
 `;
@@ -153,8 +157,11 @@ export const CardHeader = styled.div`
 export const CardCont = styled.div`
   border-radius: 0 0 24px 24px;
   padding: 2.5rem 3rem;
+  > ul {
+    display: grid;
+    gap: 20px;
+  }
   > ul > li {
-    margin-top: 0.9rem;
     font-size: 0.9rem;
     ::before {
       content: "✓";
@@ -186,10 +193,9 @@ export const CardCont = styled.div`
   }
 
   @media (max-width: 767px) {
-    padding: 2rem;
+    padding: 30px 20px;
     > ul > li {
       font-size: 0.8rem;
-      line-height: 1.8rem;
     }
   }
 `;
@@ -248,7 +254,18 @@ export const Title = styled.h2`
     font-size: 1.8rem;
   }
 `;
-
+export const Title2 = styled.h1`
+  font-size: 3rem;
+  line-height: 1.2em;
+  letter-spacing: -0.4px;
+  font-weight: bold;
+  @media (max-width: 1023px) {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 767px) {
+    font-size: 2rem;
+  }
+`;
 export const SubTitle = styled.h4`
   font-size: 1.4rem;
   color: #0fb97b;
@@ -338,6 +355,10 @@ export const AdvantageGrid = styled.div`
       padding: 3rem 2rem;
       > h4 {
         font-size: 1.25rem;
+        line-height: 1.4;
+      }
+      > h4:nth-child(2) {
+        margin-bottom: 1rem;
       }
       > p {
         font-size: 0.9rem;
@@ -354,9 +375,6 @@ export const AdvantageGrid = styled.div`
     }
     > div:nth-child(2) {
       background: #efffef;
-      > h4 {
-        margin-bottom: 1rem;
-      }
     }
   }
 `;
@@ -387,8 +405,12 @@ export const TextWrap = styled.div`
     font-weight: 600;
   }
   > p {
-    letter-spacing: -0.6px;
+    letter-spacing: -0.2px;
+    line-height: 1.4;
     color: #333;
+  }
+  @media (max-width: 767px) {
+    height: 160px;
   }
 `;
 
@@ -412,7 +434,10 @@ export const Button = styled.button`
     transition: 0.5s;
   }
   @media (max-width: 767px) {
-    padding: 12px 24px;
+    margin: 10px auto;
+    padding: 0 42px;
+    height: 56px;
+    line-height: 56px;
     font-size: 1rem;
   }
 `;
